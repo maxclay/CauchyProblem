@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <math xmlns='http://www.w3.org/1998/Math/MathML' display='block' mathsize='2em'>
+  <mrow>
+	<msup>
+    	<mi>y</mi>
+        <mo>&#x2032;</mo>
+	</msup>
+  </mrow>
+  <mo>=</mo>
+  <mrow>
+      <mo>y</mo>
+      <mo>-</mo>
+    <mfrac>
+      <mrow>
+        <mo>2</mo><mo>x</mo>
+      </mrow>
+      <mrow>
+        <mn>y</mn>
+      </mrow>
+    </mfrac>
+  </mrow>
+  <mo>;</mo>
+  <mspace width='.5em' />
+    <mrow>
+      <mo>(x1;y1) = (0;1);</mo>
+    </mrow>
+    <mspace width='.5em' />
+    <mrow>
+      <mo>[x0;5.0];</mo>
+    </mrow>
+    <mspace width='.5em' />
+    <mrow>
+      <mo>N = 33;</mo>
+    </mrow>
+</math>
