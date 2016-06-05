@@ -18,7 +18,7 @@
 		        </Tab>
 		        <Tab text="Runge–Kutta method">
 		            <content>
-		                <fx:include source="RungeKuttaMethodTab.fxml"/>
+		                <fx:include source="KuttaMersonMethodTab.fxml"/>
 		            </content>
 		        </Tab>
     		</tabs>

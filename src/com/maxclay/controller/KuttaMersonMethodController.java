@@ -4,13 +4,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.maxclay.Main;
+import com.maxclay.model.KuttaMersonMethodAlgorithm;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-public class RungeKuttaMethodController implements Initializable {
+public class KuttaMersonMethodController implements Initializable {
 
 	@FXML
 	private Pane pane;
@@ -22,6 +23,10 @@ public class RungeKuttaMethodController implements Initializable {
 		defaultFunctionImage.setLayoutY(8);
 		pane.getChildren().add(defaultFunctionImage);
 		
+		KuttaMersonMethodAlgorithm kuttaMersonMethodAlgorithm = new KuttaMersonMethodAlgorithm();
+		kuttaMersonMethodAlgorithm.run(true);
+		
+		System.out.println(kuttaMersonMethodAlgorithm.getReport().get());
 	}
 
 }
