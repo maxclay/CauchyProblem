@@ -14,6 +14,10 @@
                <font>
                   <Font size="16.0" />
                </font></Label>
+            <TextArea fx:id="textArea" layoutX="14.0" layoutY="69.0" prefHeight="546.0" prefWidth="380.0" />
+            <Label layoutX="14.0" layoutY="52.0" text="Reoport:" />
+            <Button fx:id="startButton" layoutX="14.0" layoutY="624.0" mnemonicParsing="false" text="Start" />
+            <Button fx:id="resetButton" layoutX="69.0" layoutY="624.0" mnemonicParsing="false" text="Reset" />
          </children>
       </Pane>
    </children>

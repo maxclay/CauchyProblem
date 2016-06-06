@@ -62,8 +62,10 @@ public class KuttaMersonMethodAlgorithm {
 	 */
 	public void run(boolean generateReport) {
 		
-		if(generateReport)
+		if(generateReport) {
 			reportBuilder = new StringBuilder();
+			reportBuilder.append("Solving Cauchy problem using Kutta-Merson method\n");
+		}
 		
 		double h = findStep(LOWER_BOUNDARY, HIGHER_BOUNDARY, DEFAULT_CONTROL_POINTS_NUM);
 		double R = 1;
@@ -130,8 +132,12 @@ public class KuttaMersonMethodAlgorithm {
              
         }
         
-        if(generateReport)
+        if(generateReport) {
         	reportBuilder.append("\nIteration process ended");
+        	reportBuilder.append("\n\nResults:");
+        	printResult(reportBuilder, valuesX, valuesY);
+        	reportBuilder.append("\n*****************************************************************\n");
+        }
          
 	}
 	
@@ -159,7 +165,6 @@ public class KuttaMersonMethodAlgorithm {
 		return valuesY;
 	}
 	
-	
 	/**
 	 * Represents function y - 2 * x / y in default differential equation
 	 * <msup><mi>y</mi><mo>&#x2032;</mo></msup> = y - 2 * x / y;
@@ -171,13 +176,28 @@ public class KuttaMersonMethodAlgorithm {
 		return y - 2 * x / y;
 	}
 	
+	/**
+	 * Represents function sqrt(2x + 1) that is an analytical solution for default differential equation
+	 * <msup><mi>y</mi><mo>&#x2032;</mo></msup> = y - 2 * x / y;
+	 * @param x - x parameter.
+	 * @return function result.
+	 */
+	public static double analyticalSolutionForDefaultEquation(double x) {
+		return Math.sqrt(2 * x + 1);
+	}
+	
 	private void fillArrayX(double[] x, double h) {
         
-		x[0] = 0;
-        for (int i = 1; i < 33; i++)
+        for (int i = 1; i < x.length; i++)
             x[i] = x[i - 1] + h;
         
     }
+	
+	private void printResult(StringBuilder report, double[] valuesX, double[] valuesY) {
+		
+		for(int i = 0; i < valuesX.length; i++)
+			report.append(String.format("\nx[%d] = %10.5f\ty[%d] = %10.5f", i, valuesX[i], i, valuesY[i]));
+	}
 	
 	private double findStep(double lowerBoundary, double higherBoundary, int controlPointsNum) {
 		return (higherBoundary - lowerBoundary) / controlPointsNum;

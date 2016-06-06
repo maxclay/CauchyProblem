@@ -16,7 +16,7 @@
 		                <fx:include source="MiddlePointMethodTab.fxml"/>
 		            </content>
 		        </Tab>
-		        <Tab text="Runge–Kutta method">
+		        <Tab text="Kutta-Merson method">
 		            <content>
 		                <fx:include source="KuttaMersonMethodTab.fxml"/>
 		            </content>
